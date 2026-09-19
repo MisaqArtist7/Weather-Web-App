@@ -7,62 +7,69 @@
     <link rel="stylesheet" href="assets/style/output.css">
 </head>
 
-<body>
+<body class="bg-linear-to-br from-blue-400 to-indigo-900 min-h-screen font-sans text-gray-800 antialiased selection:bg-blue-300">
 
-    <main class="container flex justify-center items-center min-h-screen">
+    <main class="container mx-auto px-4 flex justify-center items-center min-h-screen">
 
-        <section class="wa-wrapper flex flex-col justify-center items-center gap-3">
+        <section class="wa-wrapper bg-white/90 backdrop-blur-xl shadow-2xl rounded-3xl p-8 max-w-sm w-full transition-all duration-300">
 
-            <h1 class="text-4xl font-bold">
-                Weather App
+            <h1 class="text-3xl font-extrabold text-center text-gray-900 mb-8 tracking-tight flex items-center justify-center gap-2">
+                <span>🌤️</span> Weather App
             </h1>
 
-            <form action="" class="border p-11" id="myForm">
+            <form action="" class="flex flex-col gap-4 mb-2" id="myForm">
 
-                <input
-                    type="text"
-                    id="city"
-                    name="city"
-                    class="border border-gray-400 p-1 rounded outline-none"
-                    placeholder="Enter city name..."
-                >
+                <div class="relative">
+                    <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        class="w-full bg-gray-100 text-gray-700 border border-transparent rounded-2xl px-5 py-3.5 outline-none focus:bg-white focus:border-blue-400 focus:ring-4 focus:ring-blue-100 transition-all shadow-inner placeholder-gray-400 font-medium"
+                        placeholder="Enter city name..."
+                        required
+                    >
+                </div>
 
-                <button type="submit">
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-2xl shadow-lg hover:shadow-xl transition-all active:scale-[0.98]">
                     Search
                 </button>
 
             </form>
 
-
             <!-- Weather Result -->
+            <section id="weatherResult" class="hidden mt-8 animate-fade-in">
+                
+                <div class="flex flex-col items-center">
+                    
+                    <div class="text-center mb-6">
+                        <h2 id="cityName" class="text-3xl font-bold text-gray-800 tracking-wide"></h2>
+                        <p id="countryName" class="text-sm font-semibold text-gray-500 uppercase tracking-widest mt-1"></p>
+                    </div>
 
-            <section id="weatherResult" class="hidden border p-6">
+                    <div class="flex items-start justify-center mb-8">
+                        <span id="temperature" class="text-7xl font-black text-gray-900 tracking-tighter"></span>
+                        <span class="text-3xl font-bold text-gray-400 mt-2 ml-1">°C</span>
+                    </div>
 
-                <h2 id="cityName" class="text-2xl font-bold"></h2>
+                    <div class="grid grid-cols-2 gap-3 w-full text-sm">
+                        
+                        <div class="bg-blue-50/80 rounded-2xl p-4 flex flex-col items-center justify-center shadow-sm">
+                            <span class="text-gray-400 font-medium mb-1">Wind</span>
+                            <span class="font-bold text-gray-700 text-base"><span id="windSpeed"></span> km/h</span>
+                        </div>
+                        
+                        <div class="bg-indigo-50/80 rounded-2xl p-4 flex flex-col items-center justify-center shadow-sm">
+                            <span class="text-gray-400 font-medium mb-1">Code</span>
+                            <span class="font-bold text-gray-700 text-base" id="weatherCode"></span>
+                        </div>
+                        
+                        <div class="bg-purple-50/80 rounded-2xl p-4 col-span-2 flex flex-col items-center justify-center shadow-sm text-center">
+                            <span class="text-gray-400 font-medium mb-1">Timezone</span>
+                            <span class="font-bold text-gray-700 text-base" id="timeZone"></span>
+                        </div>
 
-                <p id="countryName"></p>
-
-                <p>
-                    Temperature:
-                    <span id="temperature"></span>
-                    °C
-                </p>
-
-                <p>
-                    Wind:
-                    <span id="windSpeed"></span>
-                    km/h
-                </p>
-
-                <p>
-                    Weather code:
-                    <span id="weatherCode"></span>
-                </p>
-
-                <p>
-                    Timezone:
-                    <span id="timeZone"></span>
-                </p>
+                    </div>
+                </div>
 
             </section>
 
