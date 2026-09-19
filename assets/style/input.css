@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+.container {
+    width: 100%;
+    padding: 0 16px;
+    margin: 20px auto;
+}
+
+/* Small devices */
+@media (min-width: 576px) {
+    .container { max-width: 540px; }
+}
+/* Tablet */
+@media (min-width: 768px) {
+    .container { max-width: 720px; }
+}
+/* Laptop */
+@media (min-width: 992px) {
+    .container { max-width: 960px; }
+}
+/* Desktop */
+@media (min-width: 1200px) {
+    .container { max-width: 1140px; }
+}
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .container { max-width: 1320px; }
+}
+/* Extra Large Monitor */
+@media (min-width: 1600px) {
+    .container { max-width: 1440px; }
+}
