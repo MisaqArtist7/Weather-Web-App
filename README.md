@@ -1,54 +1,77 @@
-# Weather Web App
+# 🌤️ Weather Web App
 
-A simple and responsive weather web application built with Vanilla JavaScript and Tailwind CSS.
+A sleek, responsive, and lightweight Weather Application built with **Vanilla JavaScript**, **HTML5**, and **Tailwind CSS**. It uses the **Open-Meteo API** to search for locations and display real-time weather information through a clean and minimal interface.
 
-The application uses the Open-Meteo API to search for a city and display its current weather information.
+![Project Preview](./preview.png)
 
-## Features
+🔗 Live Demo: [Weather Web App](https://YOUR-LIVE-DEMO-URL.vercel.app/)
 
-- Search for a city
-- Get city and country information
-- Display current temperature
-- Display wind speed
-- Display weather condition
-- Display timezone
-- Fetch location coordinates using the Open-Meteo Geocoding API
-- Fetch weather data using the Open-Meteo Weather API
-- Responsive UI with Tailwind CSS
-- No API key required
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
-## Technologies
+---
 
-- HTML5
-- Tailwind CSS
-- JavaScript (Vanilla JS)
-- Open-Meteo API
-- Git & GitHub
+## ✨ Features
 
-## APIs
+- 🔍 **City Search**: Search for a city and retrieve its geographical information.
+- 🌡️ **Current Temperature**: Displays the current temperature for the selected location.
+- 💨 **Wind Speed**: Shows the current wind speed.
+- ☁️ **Weather Condition**: Displays the current weather condition based on the WMO weather code.
+- 🌍 **Location Information**: Shows the selected city, country, and timezone.
+- 📱 **Responsive Design**: Optimized for desktop, tablet, and mobile screens.
+- ⚡ **Vanilla JavaScript**: Built without React or other JavaScript frameworks.
+- 🌐 **Open-Meteo API**: Uses Open-Meteo for geocoding and weather data.
 
-This project uses the following Open-Meteo APIs:
+---
 
-- Geocoding API — used to find the city's latitude and longitude.
-- Weather API — used to retrieve current weather information.
+## 🛠️ Tech Stack
 
-## Project Structure
+- **HTML5**: Semantic document structure.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Vanilla JavaScript (ES6+)**: API requests, DOM manipulation, and application logic.
+- **Open-Meteo API**: Geocoding and weather data.
+
+---
+
+## 🔌 API
+
+This project uses the [Open-Meteo API](https://open-meteo.com/) to retrieve weather and location data.
+
+### Geocoding API
+
+Used to convert a city name into geographical information such as:
+
+- City name
+- Country
+- Latitude
+- Longitude
+- Timezone
+
+### Weather API
+
+Uses the latitude and longitude to retrieve:
+
+- Current temperature
+- Wind speed
+- Weather code
+- Hourly weather data
+
+---
+
+## 📁 Project Structure
 
 ```text
 Weather-Web-App/
-│
 ├── assets/
 │   ├── js/
-│   │   └── app.js
+│   │   └── app.js          # Main application logic & API handling
 │   │
 │   └── style/
-│       ├── input.css
-│       └── output.css
+│       ├── input.css       # Tailwind CSS source file
+│       └── output.css     # Compiled CSS stylesheet
 │
-├── index.html
-│
-├── package.json
-│
-├── package-lock.json
-│
-└── README.md
+├── index.html              # Main HTML document
+├── package.json            # Project dependencies & scripts
+├── package-lock.json       # Dependency lock file
+└── README.md               # Project documentation
