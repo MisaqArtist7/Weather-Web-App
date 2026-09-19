@@ -192,6 +192,9 @@
   .flex {
     display: flex;
   }
+  .hidden {
+    display: none;
+  }
   .table {
     display: table;
   }
@@ -237,6 +240,9 @@
   }
   .p-1 {
     padding: var(--spacing);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
   }
   .p-11 {
     padding: calc(var(--spacing) * 11);

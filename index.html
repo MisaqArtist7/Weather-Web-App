@@ -6,17 +6,71 @@
     <title>Weather Web App</title>
     <link rel="stylesheet" href="assets/style/output.css">
 </head>
+
 <body>
-    
+
     <main class="container flex justify-center items-center min-h-screen">
+
         <section class="wa-wrapper flex flex-col justify-center items-center gap-3">
-            <h1 class="text-4xl font-bold">Weather App</h1>
+
+            <h1 class="text-4xl font-bold">
+                Weather App
+            </h1>
+
             <form action="" class="border p-11" id="myForm">
-                <input type="text" id="city" name="city" class="border border-gray-400 p-1 rounded outline-none" placeholder="Enter city name...">
-                <button type="submit">Search</button>
+
+                <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    class="border border-gray-400 p-1 rounded outline-none"
+                    placeholder="Enter city name..."
+                >
+
+                <button type="submit">
+                    Search
+                </button>
+
             </form>
+
+
+            <!-- Weather Result -->
+
+            <section id="weatherResult" class="hidden border p-6">
+
+                <h2 id="cityName" class="text-2xl font-bold"></h2>
+
+                <p id="countryName"></p>
+
+                <p>
+                    Temperature:
+                    <span id="temperature"></span>
+                    °C
+                </p>
+
+                <p>
+                    Wind:
+                    <span id="windSpeed"></span>
+                    km/h
+                </p>
+
+                <p>
+                    Weather code:
+                    <span id="weatherCode"></span>
+                </p>
+
+                <p>
+                    Timezone:
+                    <span id="timeZone"></span>
+                </p>
+
+            </section>
+
         </section>
+
     </main>
+
     <script src="assets/js/app.js"></script>
+
 </body>
 </html>
